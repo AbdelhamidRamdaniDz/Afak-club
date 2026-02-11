@@ -3,12 +3,12 @@ import { Facebook, Instagram, Globe, Mail, MapPin } from 'lucide-react';
 
 const Footer: React.FC<{ onNavigate: (page: string) => void }> = ({ onNavigate }) => (
   <footer className="bg-dark text-white/60 pt-20 pb-10 border-t border-accent/10">
-    <div className="container mx-auto px-6">
-      <div className="grid md:grid-cols-4 gap-12 mb-16">
+    <div className="container mx-auto px-4 sm:px-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 mb-16">
         {/* Brand */}
         <div className="flex flex-col items-center md:items-start gap-4 md:col-span-1">
           <div className="flex items-center gap-3">
-            <img src="./image/logo.png" alt="Logo" className="h-16 opacity-80" />
+            <img src="/image/logo.png" alt="Logo" className="h-16 opacity-80" />
             <div>
               <h4 className="text-2xl font-black text-accent leading-none">آفــــــــاق</h4>
               <p className="text-xs text-white/40">النادي العلمي الثقافي</p>

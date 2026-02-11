@@ -15,8 +15,7 @@ const AboutSection: React.FC = () => {
   return (
     <section id="about" className="py-28 md:py-36 bg-white relative overflow-hidden">
       <div className="absolute top-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
-      
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4 sm:px-6">
         {/* Founding story */}
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center mb-24">
           <RevealOnScroll direction="right">
@@ -30,10 +29,10 @@ const AboutSection: React.FC = () => {
                 className="rounded-3xl shadow-2xl border-[12px] border-warm relative z-10 w-full" 
                 alt="تأسيس النادي" 
               />
-              <div className="absolute -bottom-8 -left-8 bg-primary p-8 rounded-2xl shadow-2xl text-white z-20 border-b-4 border-accent">
-                <History size={36} className="mb-3 text-accent" />
-                <h3 className="text-3xl font-black">2013</h3>
-                <p className="text-sm opacity-80">سنة التأسيس</p>
+              <div className="absolute -bottom-4 -left-4 sm:-bottom-8 sm:-left-8 bg-primary p-5 sm:p-8 rounded-2xl shadow-2xl text-white z-20 border-b-4 border-accent">
+                <History size={28} className="mb-2 sm:mb-3 text-accent sm:[&]:w-9 sm:[&]:h-9" />
+                <h3 className="text-2xl sm:text-3xl font-black">2013</h3>
+                <p className="text-xs sm:text-sm opacity-80">سنة التأسيس</p>
               </div>
             </div>
           </RevealOnScroll>
@@ -82,7 +81,7 @@ const AboutSection: React.FC = () => {
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-0 left-0 w-full h-full" style={{ backgroundImage: 'url("https://www.transparenttextures.com/patterns/cubes.png")' }} />
           </div>
-          <div className="container mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 relative z-10">
+          <div className="container mx-auto px-4 sm:px-6 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 relative z-10">
             <StatCounter end={12} label="سنة من العطاء" suffix="+" />
             <StatCounter end={500} label="عضو نشط" suffix="+" />
             <StatCounter end={150} label="فعالية منظمة" suffix="+" />

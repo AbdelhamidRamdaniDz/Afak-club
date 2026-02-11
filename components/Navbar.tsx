@@ -25,9 +25,9 @@ const Navbar: React.FC<{ onNavigate: (page: string) => void }> = ({ onNavigate }
         ? 'bg-white/95 backdrop-blur-lg shadow-[0_4px_30px_rgba(88,23,23,0.08)] py-2' 
         : 'bg-transparent py-5'
     }`}>
-      <div className="container mx-auto px-6 flex items-center justify-between">
+      <div className="container mx-auto px-4 sm:px-6 flex items-center justify-between">
         <div className="flex items-center gap-3 cursor-pointer group" onClick={() => onNavigate('home')}>
-          <img src="./image/logo1.png" alt="Afak Logo" className="h-11 md:h-14 w-auto drop-shadow-md group-hover:scale-105 transition-transform" />
+          <img src="/image/logo1.png" alt="Afak Logo" className="h-11 md:h-14 w-auto drop-shadow-md group-hover:scale-105 transition-transform" />
           <div className="hidden lg:block">
             <h1 className={`font-black text-lg leading-none transition-colors ${isScrolled ? 'text-primary' : 'text-white'}`}>آفــــــــاق</h1>
             <p className={`text-[10px] transition-colors ${isScrolled ? 'text-gray-500' : 'text-white/60'}`}>النادي العلمي الثقافي</p>
@@ -60,13 +60,13 @@ const Navbar: React.FC<{ onNavigate: (page: string) => void }> = ({ onNavigate }
       </div>
 
       {/* Mobile Menu */}
-      <div className={`fixed inset-0 bg-white/98 backdrop-blur-xl z-[110] transition-all duration-500 lg:hidden flex flex-col items-center justify-center gap-6 ${
+      <div className={`fixed inset-0 w-screen h-screen bg-white/98 backdrop-blur-xl z-[110] transition-all duration-500 lg:hidden flex flex-col items-center justify-center gap-6 ${
         isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
       }`}>
         <button className="absolute top-8 right-8" onClick={() => setIsMenuOpen(false)}>
           <X size={36} className="text-primary" />
         </button>
-        <img src="./image/logo1.png" alt="Logo" className="h-20 mb-4 opacity-20" />
+        <img src="/image/logo1.png" alt="Logo" className="h-20 mb-4 opacity-20" />
         {navItems.map((item, idx) => (
           <a 
             key={item.name} 

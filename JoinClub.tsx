@@ -155,7 +155,7 @@ const JoinClub: React.FC<{ onBack: () => void }> = ({ onBack }) => {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-lg shadow-sm py-3">
         <div className="container mx-auto px-6 flex justify-between items-center">
           <div className="flex items-center gap-3 cursor-pointer" onClick={onBack}>
-            <img src="./image/logo1.png" alt="Logo" className="h-10 w-auto" />
+            <img src="/image/logo1.png" alt="Logo" className="h-10 w-auto" />
             <span className="font-black text-lg text-primary">انضم إلينا</span>
           </div>
           <button onClick={onBack} className="flex items-center gap-2 text-primary font-bold hover:text-accent transition-colors group text-sm">

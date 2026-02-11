@@ -15,6 +15,7 @@ import CTASection from './components/CTASection';
 import Footer from './components/Footer';
 import NewsArchive from './NewsArchive';
 import JoinClub from './JoinClub';
+import AIChatbot from './components/AIChatbot';
 
 // ─── App ──────────────────────────────────────────────────────────
 const App: React.FC = () => {
@@ -48,6 +49,7 @@ const App: React.FC = () => {
         <JoinClub onBack={() => navigate('home')} />
       )}
       <Footer onNavigate={navigate} />
+      <AIChatbot />
     </div>
   );
 };

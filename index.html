@@ -232,6 +232,47 @@
         -webkit-text-fill-color: transparent;
         background-clip: text;
       }
+
+      /* ======= Prevent horizontal overflow ======= */
+      html, body {
+        overflow-x: hidden;
+        max-width: 100vw;
+      }
+
+      /* ======= Touch-friendly targets ======= */
+      button, a, [role="button"] {
+        min-height: 44px;
+        min-width: 44px;
+      }
+      nav a, footer a {
+        min-height: 36px;
+        display: inline-flex;
+        align-items: center;
+      }
+
+      /* ======= Chatbot animations ======= */
+      @keyframes chat-slide-up {
+        from { opacity: 0; transform: translateY(20px) scale(0.95); }
+        to { opacity: 1; transform: translateY(0) scale(1); }
+      }
+      @keyframes chat-slide-down {
+        from { opacity: 1; transform: translateY(0) scale(1); }
+        to { opacity: 0; transform: translateY(20px) scale(0.95); }
+      }
+      @keyframes typing-dot {
+        0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+        30% { transform: translateY(-6px); opacity: 1; }
+      }
+      .animate-chat-in { animation: chat-slide-up 0.35s ease-out forwards; }
+      .animate-chat-out { animation: chat-slide-down 0.25s ease-in forwards; }
+
+      /* ======= Mobile padding safe area ======= */
+      @supports (padding: max(0px)) {
+        body {
+          padding-left: max(0px, env(safe-area-inset-left));
+          padding-right: max(0px, env(safe-area-inset-right));
+        }
+      }
     </style>
     <script>
       tailwind.config = {

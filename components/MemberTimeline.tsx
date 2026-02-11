@@ -12,7 +12,7 @@ const MemberTimeline: React.FC = () => {
 
   return (
     <section className="py-28 md:py-36 bg-warm/60 relative overflow-hidden">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="text-center mb-20">
           <RevealOnScroll>
             <div className="bg-primary/5 text-primary px-4 py-1 rounded-lg font-bold mb-4 inline-block text-sm">رحلتك معنا</div>
@@ -31,9 +31,9 @@ const MemberTimeline: React.FC = () => {
 
           {stages.map((stage, idx) => (
             <RevealOnScroll key={idx} direction={idx % 2 === 0 ? 'right' : 'left'} delay={idx * 200}>
-              <div className={`flex items-center gap-8 mb-16 last:mb-0 ${idx % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+              <div className={`flex flex-col md:flex-row items-center gap-4 md:gap-8 mb-12 md:mb-16 last:mb-0 ${idx % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
                 {/* Content */}
-                <div className={`flex-1 ${idx % 2 === 0 ? 'md:text-left' : 'md:text-right'}`}>
+                <div className={`flex-1 w-full ${idx % 2 === 0 ? 'md:text-left' : 'md:text-right'}`}>
                   <div className="bg-white p-8 rounded-3xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-50">
                     <span className="text-accent font-black text-sm">{stage.year}</span>
                     <h3 className="text-2xl font-black text-primary mt-2 mb-3">{stage.title}</h3>

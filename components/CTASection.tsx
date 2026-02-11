@@ -12,7 +12,7 @@ const CTASection: React.FC<{ onJoin: () => void }> = ({ onJoin }) => (
     <div className="absolute bottom-10 left-16 w-16 h-16 gold-gradient opacity-10 rounded-full float-slow" />
     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] border border-accent/5 rounded-full spin-slow" />
 
-    <div className="container mx-auto px-6 relative z-10 text-center">
+    <div className="container mx-auto px-4 sm:px-6 relative z-10 text-center">
       <RevealOnScroll>
         <div className="max-w-3xl mx-auto">
           <h2 className="text-4xl md:text-6xl font-black text-white mb-6 leading-tight">
@@ -23,7 +23,7 @@ const CTASection: React.FC<{ onJoin: () => void }> = ({ onJoin }) => (
           </p>
           <button 
             onClick={onJoin}
-            className="gold-gradient text-primary font-black py-5 px-16 rounded-full text-xl shadow-2xl hover:scale-110 transition-all active:scale-95 pulse-glow inline-flex items-center gap-3"
+            className="gold-gradient text-primary font-black py-4 sm:py-5 px-10 sm:px-16 rounded-full text-lg sm:text-xl shadow-2xl hover:scale-110 transition-all active:scale-95 pulse-glow inline-flex items-center gap-3"
           >
             <UserPlus size={24} />
             انضم الآن
